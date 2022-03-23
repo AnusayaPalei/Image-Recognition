@@ -1,0 +1,68 @@
+ 
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com//ml5@0.4.3/dist/ml5.min.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body>
+  <div class="container">
+    
+    <center>
+<h3 class="btn btn-primary heading ">IMAGE RECOGNITION</h3>
+      <br><br>
+      <div class="menu">
+      <ul class="name_of_objects">
+        <li class="objects">CLIP</li>
+        <li class="objects">WATCH</li>
+        <li class="objects">NAIL POLISH</li>
+        <li class="objects">PHONE</li>
+      </ul>
+      <label style="font-size: 22px;">Model is trained to identify the following objects: </label>
+    </div>
+<br><br>
+
+      <label class="col-lg-4 col-md-4 col-sm-4  webcam_view">Webcam View - </label>
+
+      <label class="col-lg-4 col-md-4 col-sm-4"> </label>
+
+     <label class="col-lg-4 col-md-4 col-sm-4 captured_image"> Captured Image-</label>
+
+      <br><br>
+<div class="col-lg-4 col-md-4 col-sm-4 webcam_view" id="camera"> </div>
+
+<div class="col-lg-4 col-md-4 col-sm-4">  </div>
+
+<div class="col-lg-4 col-md-4 col-sm-4" id="captured_image"></div>
+      <br><br>
+
+      <button onclick="capture()" class="btn btn-success">Capture Image</button>
+      &nbsp;
+      &nbsp;
+      <button onclick="identify()" class="btn btn-warning">Identify Image</button>
+      <br><br>
+
+
+      <br><br>
+
+      <p style="font-size: 22px;" class="btn btn-default">Object : <span id="object_name"></span> </p>
+      <br><br>
+      <p style="font-size: 22px;" class="btn btn-default">Accuracy : <span id="object_accuracy"></span>  </p>
+    </center>
+
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
